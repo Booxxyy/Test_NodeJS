@@ -1,0 +1,20 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres  # Исправлено: правильный отступ
+    container_name: ogl  # Исправлено: правильный отступ
+    ports:
+      - "5432:5432"  # Исправлено: правильный отступ
+    environment:
+      POSTGRES_HOST: localhost
+      POSTGRES_USER: test  # Исправлено: убраны лишние пробелы вокруг "="
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: test
+    command: postgres  # Исправлено: правильный отступ
+    restart: always  # Исправлено: правильный отступ
+
+  redis:
+    image: redis:alpine3.14  # Исправлено: правильный отступ
+    container_name: redis-oogl  # Исправлено: правильный отступ
+    ports:
+      - "6379:6379"  # Исправлено: правильный отступ
